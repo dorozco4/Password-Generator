@@ -7,24 +7,26 @@ function randomInt(min, max) {
     min = 0
  }
  var rand = Math.random()
- return Math.floor(min*(1 - rand) + rand * max)
+ return Math.floor(min*( 1 - rand ) + rand*max)
 }
 function getRandomItem(list) {
-
   return list[randomInt(list.length)]
 }
-
 
 
 function generatePassword() {
  
 // started the window inputs by asking the user questions.
+// if they do not put a number when asked from the first prompt, then they
+// get a message saying this is not a number 
 // then depending on the answer they give us, they get whether its too short or too long.
 
 
 var signInput = window.prompt("How long should the password be?")
 
 var passwordLength = parseInt(signInput)
+
+
 
 
 if (isNaN(passwordLength)) {
@@ -53,48 +55,34 @@ var lowerCase = ('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm'
 var symbolsS = ('!','@','#','$','%','^','*','?')
 
 
-// had to make a box inside of another box for the numbers/letters/symbols
-
+// had to make an array inside and array? for the numbers/letters/symbols all to be in one spot 
 var randomItems = []
 
-if (confirmNumbers == true) {
+// Depending on their answe the bottom part will include what the user is aking for.
+
+if (confirmNumbers === true) {
   randomItems.push(numbers)
 }
-if (confirmUppercase == true) {
+if (confirmUppercase === true) {
   randomItems.push(upperCase)
 }
-if (confirmLowercase == true) {
+if (confirmLowercase === true) {
   randomItems.push(lowerCase) 
 } 
-if (confirmSymbols == true) {
+if (confirmSymbols === true) {
   randomItems.push(symbolsS)
 }
-
-
-// function randomInt(min, max) {
-//   if (!max) {
-//     max = min 
-//     min = 0
-//  }
-//  var rand = Math.random()
-//  return Math.floor(min*(1 - rand) + rand * max)
-// }
-// function getRandomItem(list) {
-
-//   return list[randomInt(list.length)]
-// }
-
-
 
 
 var generatePassword = "" 
 
 
-for (var i = 0; i < passwordLength; i++){ 
+for (var i = 0; i < passwordLength; i++) { 
   var randomList = getRandomItem(randomItems) 
   var randomchar = getRandomItem(randomList)
   generatePassword += randomchar
 }
+
 return generatePassword
 }
 
@@ -103,8 +91,10 @@ function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
  
-  passwordText.value = password;
 
+  if(password) {
+  passwordText.value = password;
+  }
 }
 
 // Add event listener to generate button

@@ -1,3 +1,23 @@
+
+In this assignment we used all of the lessons we learned during week 3 of Javascript. Well applied all of the 
+lessons in order to create a password generator with random letters, symbols, and numbers. We also added the
+function whether the user wanted the letters to be upper-cased, lower-cased or even both within the generated 
+password.
+
+
+
+<img width="1243" alt="Screen Shot 2022-11-16 at 9 14 24 PM" src="https://user-images.githubusercontent.com/114192229/202338298-b366c062-f533-49d4-aecd-cfd7589750eb.png">
+
+
+
+
+
+<img width="1242" alt="Screen Shot 2022-11-16 at 9 14 36 PM" src="https://user-images.githubusercontent.com/114192229/202338269-3702b1d2-0069-4d00-b5f3-99033d75860d.png">
+
+
+
+
+
 # 03 JavaScript: Password Generator
 
 ## Your Task

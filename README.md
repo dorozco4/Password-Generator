@@ -1,8 +1,12 @@
 
-In this assignment we used all of the lessons we learned during week 3 of Javascript. Well applied all of the 
+In this assignment we used all of the lessons we learned during week 3 of Javascript. We applied all of the 
 lessons in order to create a password generator with random letters, symbols, and numbers. We also added the
 function whether the user wanted the letters to be upper-cased, lower-cased or even both within the generated 
 password.
+
+
+https://dorozco4.github.io/Password-Generator/
+
 
 
 

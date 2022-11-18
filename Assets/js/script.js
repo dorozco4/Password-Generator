@@ -68,7 +68,7 @@ function generatePassword() {
 
   var generatePassword = ""
 
-
+// this function is used so we can get all of the numbers/symbols/etc to come out in random order for the password
   for (var i = 0; i < passwordLength; i++) {
      generatePassword += randomItems[Math.floor(Math.random()*randomItems.length)];
   }
